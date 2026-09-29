@@ -1,0 +1,21 @@
+/* ============================================================
+   STYLE.CSS - Punto de entrada de estilos
+   ============================================================
+   Este archivo solo importa todos los demás archivos CSS.
+   El orden de los @imports importa: las variables deben ir
+   primero, luego base, layout, componentes y utilidades.
+
+   Para agregar un nuevo archivo CSS:
+     1. Crea el archivo en static/css/
+     2. Añade un @import aquí
+
+   NOTA: Los @imports de CSS son síncronos (bloqueantes).
+   Para producción, considera usar Hugo Pipes para minificar.
+   ============================================================ */
+
+@import url("variables.css");   /* Variables de diseño (colores, tipografía, espaciado) */
+@import url("base.css");        /* Reset básico y estilos base (body, links, headings) */
+@import url("layout.css");      /* Estructura del layout (container) */
+@import url("components.css");  /* Componentes UI (cards, botones, formularios, etc.) */
+@import url("utilities.css");   /* Clases de utilidad (highlight, smallerfont) */
+@import url("navbar.css");      /* Barra de navegación (sticky, responsive) */

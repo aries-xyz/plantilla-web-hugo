@@ -1,0 +1,111 @@
+/* ============================================================
+   VARIABLES.CSS - Variables globales de diseño
+   ============================================================
+   Define TODOS los valores de diseño del sitio: colores, tipografía,
+   espaciado, bordes, layout y animaciones.
+
+   PERSONALIZACIÓN RÁPIDA:
+   - Cambia los colores de fondo y texto para tu paleta
+   - Ajusta --container-width para el ancho del contenido
+   - Modifica --font-main para cambiar la tipografía
+   - Cambia --radius-card para el redondeado de las cards
+
+   El sistema de temas funciona con [data-theme="dark"] y
+   [data-theme="light"]. El tema se controla con theme.js.
+   ============================================================ */
+
+/* ============================================================
+   TEMA OSCURO (predeterminado)
+   ============================================================ */
+:root,
+[data-theme="dark"] {
+
+    /* ----- Fondo ----- */
+    --bg: #121212;              /* Fondo principal del sitio */
+    --surface: #1A1A1A;         /* Fondo de cards y superficies elevadas */
+    --surface-hover: #2A2A2A;   /* Fondo de cards al pasar el mouse */
+
+    /* ----- Texto ----- */
+    --text: #E0E0E0;            /* Color de texto principal */
+    --text-soft: #C8C8C8;       /* Texto secundario (subtítulos, descripciones) */
+    --text-muted: #AFAFAF;      /* Texto terciario (enlaces, meta) */
+
+    /* ----- Bordes ----- */
+    --border: #2A2A2A;          /* Color de bordes sutiles */
+
+    /* ----- Botones ----- */
+    --button-bg: #202020;       /* Fondo de botones */
+    --button-hover: #2A2A2A;    /* Fondo de botones al pasar el mouse */
+    --button-text: #EAEAEA;     /* Texto de botones */
+    --button-border: #2F2F2F;   /* Borde de botones */
+
+    /* ----- Navbar ----- */
+    --navbar-bg: #1A1A1A;       /* Fondo de la barra de navegación */
+    --navbar-border: #2A2A2A;   /* Borde inferior de la navbar */
+
+    /* ----- Sombras ----- */
+    --shadow: 0 6px 20px rgba(0, 0, 0, .50);  /* Sombra de cards */
+
+}
+
+/* ============================================================
+   TEMA CLARO
+   ============================================================ */
+[data-theme="light"] {
+
+    /* ----- Fondo ----- */
+    --bg: #F2F2F2;
+    --surface: #FAFAFA;
+    --surface-hover: #E8E8E8;
+
+    /* ----- Texto ----- */
+    --text: #222222;
+    --text-soft: #555555;
+    --text-muted: #777777;
+
+    /* ----- Bordes ----- */
+    --border: #D0D0D0;
+
+    /* ----- Botones ----- */
+    --button-bg: #E6E6E6;
+    --button-hover: #DADADA;
+    --button-text: #222222;
+    --button-border: #C8C8C8;
+
+    /* ----- Navbar ----- */
+    --navbar-bg: #FAFAFA;
+    --navbar-border: #D0D0D0;
+
+    /* ----- Sombras ----- */
+    --shadow: 0 6px 20px rgba(0, 0, 0, .10);
+
+}
+
+/* ============================================================
+   VARIABLES COMUNES (independientes del tema)
+   ============================================================ */
+:root {
+
+    /* ----- Tipografía ----- */
+    /* System UI stack: usa la fuente nativa del sistema operativo */
+    --font-main: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, sans-serif;
+
+    /* ----- Espaciado ----- */
+    --spacing-xs: 8px;          /* Espaciado extra pequeño */
+    --spacing-sm: 12px;         /* Espaciado pequeño */
+    --spacing-md: 20px;         /* Espaciado medio (padding de cards) */
+    --spacing-lg: 32px;         /* Espaciado grande */
+
+    /* ----- Bordes ----- */
+    --radius-button: 14px;      /* Redondeado de botones */
+    --radius-card: 18px;        /* Redondeado de cards */
+
+    /* ----- Layout ----- */
+    --navbar-height: 60px;      /* Altura de la barra de navegación */
+    --container-width: 360px;   /* Ancho máximo del contenido (móvil-first) */
+
+    /* ----- Animaciones ----- */
+    --transition: all .25s ease;  /* Transición suave para hover y cambios */
+
+}

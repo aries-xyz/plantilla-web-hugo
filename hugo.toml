@@ -1,0 +1,66 @@
+# ============================================================
+#  CONFIGURACIÓN DEL SITIO - PLANTILLA HUGO
+# ============================================================
+#  Personaliza estos valores para cada nuevo proyecto.
+# ============================================================
+
+# URL base del sitio (cambiar al dominio final)
+baseURL = "https://ejemplo.com/"
+
+# Título del sitio (aparece en el navegador y en los meta tags)
+title = "Mi Sitio"
+
+# Idioma principal del contenido
+defaultContentLanguage = "es"
+
+# ------------------------------------------------------------
+#  IDIOMAS
+# ------------------------------------------------------------
+#  Para agregar más idiomas, duplica este bloque:
+#  [languages.en]
+#  locale = "en-US"
+#  label = "English"
+# ------------------------------------------------------------
+[languages.es]
+locale = "es-MX"
+label = "Español"
+
+# ------------------------------------------------------------
+#  TAXONOMÍAS
+# ------------------------------------------------------------
+#  Permiten agrupar contenido por etiquetas y categorías.
+#  Se usan en los partials tagcloud.html y sitemap.html.
+# ------------------------------------------------------------
+[taxonomies]
+tag = "tags"
+category = "categories"
+
+# ------------------------------------------------------------
+#  RENDERIZADO DE MARKDOWN
+# ------------------------------------------------------------
+#  unsafe = true permite HTML crudo dentro de los archivos .md
+#  (necesario si usas <img>, <button>, <video>, etc. en markdown)
+#  Si no necesitas HTML en markdown, ponlo en false por seguridad.
+# ------------------------------------------------------------
+[markup.goldmark.renderer]
+unsafe = true
+
+# ------------------------------------------------------------
+#  PARÁMETROS PERSONALIZADOS
+# ------------------------------------------------------------
+#  Accesibles en templates como {{ .Site.Params.nombre }}
+# ------------------------------------------------------------
+[params]
+
+# Configuración del formulario de contacto
+# URL a la que se envían los datos del formulario
+formAction = "https://tu-servidor.com/api/contacto"
+
+# Página a la que se redirige después de enviar (relativa a la raíz)
+formRedirect = "/gracias"
+
+# Email de contacto (se muestra en el footer)
+emailContacto = "contacto@ejemplo.com"
+
+# Texto del footer (se muestra bajo la licencia)
+textoSitio = "Este portal no usa cookies ni recopila datos personales."

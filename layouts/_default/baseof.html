@@ -1,0 +1,38 @@
+{{/*
+  ============================================================
+  BASEOF.HTML - Estructura base de todas las páginas
+  ============================================================
+  Este es el layout principal que envuelve todo el contenido.
+  Define la estructura HTML5 básica: <!DOCTYPE>, <html>, <head>
+  y <body>, e invoca los partials de header y footer.
+
+  El bloque "main" es lo que cada layout hijo debe definir.
+  ============================================================
+*/}}
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+{{/*  data-theme="dark" es el tema por defecto.
+      El script en head.html puede cambiar a "light" automáticamente
+      según la preferencia del sistema o del usuario.
+*/}}
+
+<head>
+    {{ partial "head.html" . }}
+</head>
+
+<body>
+
+    {{/*  Header con navegación principal (ver partials/header.html)  */}}
+    {{ partial "header.html" . }}
+
+    {{/*  Contenido principal: cada layout define su bloque "main"  */}}
+    <main>
+        {{ block "main" . }}{{ end }}
+    </main>
+
+    {{/*  Footer con licencia, email y scripts (ver partials/footer.html)  */}}
+    {{ partial "footer.html" . }}
+
+</body>
+
+</html>

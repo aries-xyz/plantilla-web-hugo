@@ -1,0 +1,24 @@
+{{/*
+  ============================================================
+  SHORTCODE: IMG-STATIC - Imágenes desde /static/
+  ============================================================
+  Renderiza un <img> apuntando a un archivo dentro de /static/.
+  Usa relURL para que la URL se ajuste al baseURL del sitio.
+
+  Uso en un archivo .md:
+    {{< img-static src="images/mi-imagen.png" alt="Descripción" >}}
+
+  Parámetros:
+    src  ruta RELATIVA al directorio /static/ (obligatorio)
+         Ejemplo: "images/foto.png" -> /static/images/foto.png
+    alt  texto alternativo para accesibilidad (obligatorio)
+    cls  clase CSS opcional (default: "adjust-img")
+
+  EJEMPLOS:
+    {{< img-static src="images/logo.png" alt="Logo del sitio" >}}
+    {{< img-static src="images/foto.jpg" alt="Mi foto" cls="profile-img" >}}
+  ============================================================
+*/}}
+<img src="{{ .Get "src" | relURL }}"
+     alt="{{ .Get "alt" }}"
+     class="{{ .Get "cls" | default "adjust-img" }}">

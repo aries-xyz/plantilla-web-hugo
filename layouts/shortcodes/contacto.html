@@ -1,0 +1,36 @@
+{{/*
+  ============================================================
+  SHORTCODE: CONTACTO - Formulario de contacto
+  ============================================================
+  Renderiza un formulario de contacto genérico.
+  La configuración se lee de hugo.toml -> [params].
+
+  Uso en un archivo .md:
+    {{< contacto >}}
+
+  CONFIGURACIÓN en hugo.toml:
+    [params]
+    formAction = "https://tu-servidor.com/api/contacto"
+    formRedirect = "/gracias"
+
+  PERSONALIZACIÓN:
+  - Cambia las etiquetas de los campos si quieres otro texto
+  - Añade más campos según tus necesidades
+  ============================================================
+*/}}
+<form id="contact-form" action="{{ .Site.Params.formRedirect | default "gracias" | relURL }}" method="GET">
+  <input type="checkbox" name="botcheck" class="hidden">
+  <label for="name">Nombre</label>
+  <br>
+  <input type="text" id="name" name="name" required>
+  <br><br>
+  <label for="email">Tu correo electrónico</label>
+  <br>
+  <input type="email" id="email" name="email" required>
+  <br><br>
+  <label for="message">Mensaje</label>
+  <br>
+  <textarea id="message" name="message" rows="5" required></textarea>
+  <br><br>
+  <button type="submit">Enviar</button>
+</form>

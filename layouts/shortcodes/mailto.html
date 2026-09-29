@@ -1,0 +1,14 @@
+{{/*
+  ============================================================
+  SHORTCODE: MAILTO - Enlace de email
+  ============================================================
+  Renderiza un enlace mailto: con el email de contacto
+  configurado en hugo.toml -> [params].emailContacto.
+
+  Uso en un archivo .md:
+    {{< mailto >}}
+
+  No requiere parámetros.
+  ============================================================
+*/}}
+<a href="mailto:{{ .Site.Params.emailContacto }}">{{ .Site.Params.emailContacto }}</a>

@@ -1,0 +1,23 @@
+{{/*
+  ============================================================
+  SINGLE.HTML - Páginas individuales
+  ============================================================
+  Se usa para páginas de contenido individual (artículos, proyectos, etc.)
+  Muestra:
+    1. El título de la página (entre ※ ※)
+    2. El contenido completo
+  ============================================================
+*/}}
+{{ define "main" }}
+
+<div class="container">
+
+    <h2>{{ .Title }}</h2>
+
+    <div class="card">
+        {{ .Content }}
+    </div>
+
+</div>
+
+{{ end }}

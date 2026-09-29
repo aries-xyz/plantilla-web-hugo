@@ -1,0 +1,47 @@
+{{/*
+  ============================================================
+  LIST.HTML - Páginas de lista/sección
+  ============================================================
+  Se usa para secciones como /proyectos/, /articulos/, etc.
+  Muestra:
+    1. El título de la sección (entre ※ ※)
+    2. El contenido de _index.md (si existe)
+    3. Cards con las páginas hijas (título + descripción)
+  ============================================================
+*/}}
+{{ define "main" }}
+
+<div class="container">
+
+    <h2>{{ .Title }}</h2>
+
+    {{/*  Contenido de _index.md (opcional) - solo si no está vacío  */}}
+    {{ with .Content }}
+    {{ if ne (trim . "") "" }}
+    <div class="card">
+        {{ . }}
+    </div>
+    <br>
+    {{ end }}
+    {{ end }}
+
+    {{/*  Lista de páginas hijas como cards  */}}
+    {{ range .Pages.ByWeight }}
+
+    <div class="card">
+        <h3>
+            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+        </h3>
+
+        {{ with .Description }}
+        <p>{{ . }}</p>
+        {{ end }}
+    </div>
+
+    <br>
+
+    {{ end }}
+
+</div>
+
+{{ end }}

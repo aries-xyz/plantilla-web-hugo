@@ -1,0 +1,17 @@
+/* ============================================================
+   LAYOUT.CSS - Estructura del layout
+   ============================================================
+   Define la estructura principal del sitio: el container
+   que centra el contenido y limita su ancho.
+
+   PERSONALIZACIÓN:
+   - Cambia --container-width en variables.css para ajustar
+     el ancho máximo del contenido
+   ============================================================ */
+
+/* ----- Container principal ----- */
+.container {
+    max-width: var(--container-width);  /* Ancho máximo del contenido */
+    margin: auto;                       /* Centrar horizontalmente */
+    padding: var(--spacing-md);         /* Espaciado interno */
+}

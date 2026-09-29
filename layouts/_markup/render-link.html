@@ -1,0 +1,16 @@
+{{/*
+  ============================================================
+  RENDER-LINK.html - Renderizado personalizado de enlaces
+  ============================================================
+  Se aplica a TODOS los enlaces markdown [texto](url).
+  Añade target="_blank" y rel="noopener noreferrer" automáticamente
+  a los enlaces externos (http/https), para que se abran en
+  pestaña nueva de forma segura.
+
+  Los enlaces internos (relativos) se renderizan normalmente.
+
+  No necesitas modificar este archivo normalmente.
+  ============================================================
+*/}}
+{{- $url := .Destination -}}
+<a href="{{ $url }}"{{- if or (hasPrefix $url "http://") (hasPrefix $url "https://") }} target="_blank" rel="noopener noreferrer"{{- end -}}>{{ .Text | safeHTML }}</a>

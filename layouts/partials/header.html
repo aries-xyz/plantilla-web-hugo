@@ -1,0 +1,36 @@
+{{/*
+  ============================================================
+  HEADER.HTML - Barra de navegación
+  ============================================================
+  Contiene:
+    - Enlace al inicio (brand)
+    - Enlaces de navegación principal
+    - Botón de cambio de tema claro/oscuro
+
+  PERSONALIZACIÓN:
+  Edita los enlaces en <nav class="nav-links"> para que coincidan
+  con las secciones de tu sitio. Usa {{ "/seccion/" | relURL }}
+  para que las rutas funcionen con cualquier baseURL.
+  ============================================================
+*/}}
+<header class="navbar">
+
+    <div class="nav-brand">
+        <a href="{{ "/" | relURL }}">Inicio</a>
+    </div>
+
+    <nav class="nav-links">
+        <a href="{{ "/acerca-de/" | relURL }}">Acerca de</a>
+        <a href="{{ "/proyectos/" | relURL }}">Proyectos</a>
+        <a href="{{ "/recursos/" | relURL }}">Recursos</a>
+        <a href="{{ "/articulos/" | relURL }}">Artículos</a>
+        <a href="{{ "/contacto/" | relURL }}">Contacto</a>
+    </nav>
+
+    <button id="theme-toggle"
+            class="theme-button"
+            aria-label="Cambiar tema">
+        ☀
+    </button>
+
+</header>

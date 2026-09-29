@@ -1,0 +1,30 @@
+/* ============================================================
+   UTILITIES.CSS - Clases de utilidad
+   ============================================================
+   Clases pequeñas y reutilizables para ajustes rápidos.
+   Se pueden aplicar a cualquier elemento HTML.
+
+   Uso:
+     <p class="highlight">Texto resaltado</p>
+     <p class="smallerfont">Texto pequeño</p>
+   ============================================================ */
+
+/* ----- Texto resaltado (más grande y visible) ----- */
+.highlight {
+    font-size: 15px;                    /* Ligeramente mayor que el base */
+    color: var(--text-soft);            /* Color suave pero visible */
+}
+
+/* ----- Texto pequeño (para notas, footer, etc.) ----- */
+.smallerfont {
+    font-size: 12px;                    /* Más pequeño que el base */
+    opacity: .75;                       /* Semitransparente */
+    text-align: center;                 /* Centrar contenido del footer */
+}
+
+/* ----- Enlaces centrados (para secciones específicas) ----- */
+.center-link {
+    display: block;                     /* Convertir en block para poder centrar */
+    text-align: center;                 /* Centrar texto del enlace */
+    margin: 10px auto;                  /* Centrar con margen */
+}

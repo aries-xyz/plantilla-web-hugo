@@ -1,0 +1,33 @@
+{{/*
+  ============================================================
+  FOOTER.html - Pie de página
+  ============================================================
+  Contiene:
+    - Aviso de privacidad
+    - Licencia CC0 (cambia si usas otra licencia)
+    - Email de contacto (configurado en hugo.toml)
+    - Año dinámico
+    - Scripts JS (theme.js, contact-form.js, Web3forms)
+
+  PERSONALIZACIÓN:
+  - Cambia el texto de privacidad en hugo.toml -> [params].textoSitio
+  - Cambia el email en hugo.toml -> [params].emailContacto
+  - Si no usas Web3forms, elimina la última línea de script
+  ============================================================
+*/}}
+<p class="smallerfont">
+
+    {{ .Site.Params.textoSitio }}
+    <br><br>
+    This work is marked <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0 Universal</a><img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/zero.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;">
+    <br><br>
+    <a href="mailto:{{ .Site.Params.emailContacto }}"><b>{{ .Site.Params.emailContacto }}</b></a>
+    <br><br>
+    {{ now.Year }}
+    <br><br>
+    ♱
+</p>
+
+{{/*  Scripts JS  */}}
+<script src="{{ "js/theme.js" | relURL }}"></script>
+<script src="{{ "js/contact-form.js" | relURL }}"></script>

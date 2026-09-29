@@ -1,0 +1,120 @@
+/* ============================================================
+   NAVBAR.CSS - Barra de navegación
+   ============================================================
+   Define los estilos de la barra de navegación fija (sticky)
+   que aparece en la parte superior de todas las páginas.
+
+   Características:
+     - Sticky: se queda fija al hacer scroll
+     - Responsive: se adapta a pantallas pequeñas
+     - Accesible: respeta prefers-reduced-motion
+
+   PERSONALIZACIÓN:
+   - Cambia --navbar-height en variables.css para ajustar la altura
+   - Modifica los colores usando las variables de variables.css
+   ============================================================ */
+
+/* ============================================================
+   Barra principal
+   ============================================================ */
+.navbar {
+    position: sticky;                   /* Fija al hacer scroll */
+    top: 0;                             /* Pegada a la parte superior */
+
+    display: flex;
+    justify-content: space-between;     /* Espacio entre brand y links */
+    align-items: center;                /* Alinear verticalmente */
+
+    height: var(--navbar-height);       /* Altura definida en variables */
+
+    padding: 0 var(--spacing-md);       /* Espaciado horizontal */
+
+    background: var(--navbar-bg);        /* Fondo de la navbar */
+    border-bottom: 1px solid var(--navbar-border);  /* Borde inferior */
+
+    z-index: 1000;                      /* Asegurar que esté por encima de otros elementos */
+}
+
+/* ============================================================
+   Logo / Brand (enlace al inicio)
+   ============================================================ */
+.nav-brand a {
+    color: var(--text);                 /* Color de texto principal */
+    text-decoration: none;              /* Sin subrayado */
+    font-size: 1.2rem;                  /* Tamaño ligeramente mayor */
+    white-space: nowrap;                /* Evitar salto de línea */
+}
+
+/* ============================================================
+   Enlaces de navegación
+   ============================================================ */
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);             /* Espacio entre enlaces */
+}
+
+.nav-links a {
+    color: var(--text-muted);           /* Color suave para enlaces */
+    text-decoration: none;              /* Sin subrayado */
+    transition: var(--transition);      /* Transición suave al pasar el mouse */
+}
+
+.nav-links a:hover {
+    color: var(--text);                 /* Color principal al pasar el mouse */
+}
+
+/* ============================================================
+   Botón de cambio de tema
+   ============================================================ */
+.theme-button {
+    background: transparent;            /* Fondo transparente */
+    border: none;                       /* Sin borde */
+    color: var(--text);                 /* Color de texto principal */
+    font-size: 1.2rem;                  /* Tamaño del icono */
+    cursor: pointer;                    /* Cursor de mano */
+    transition: var(--transition);      /* Transición suave */
+}
+
+.theme-button:hover {
+    transform: rotate(15deg);           /* Rotar el icono al pasar el mouse */
+}
+
+/* ============================================================
+   Responsive: pantallas pequeñas (< 600px)
+   ============================================================ */
+@media (max-width: 600px) {
+
+    .navbar {
+        flex-direction: column;         /* Apilar verticalmente */
+        justify-content: center;
+        gap: var(--spacing-sm);         /* Espacio entre elementos */
+
+        height: auto;                   /* Altura automática */
+        padding: var(--spacing-md);     /* Espaciado interno */
+    }
+
+    .nav-links {
+        flex-wrap: wrap;                /* Permitir saltos de línea */
+        justify-content: center;        /* Centrar enlaces */
+        gap: var(--spacing-sm);         /* Espacio reducido */
+    }
+
+}
+
+/* ============================================================
+   Accesibilidad: usuarios con "reducir movimiento" activado
+   ============================================================ */
+@media (prefers-reduced-motion: reduce) {
+
+    .theme-button:hover {
+        transform: none;                /* Desactivar rotación */
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition: none !important;    /* Desactivar todas las transiciones */
+    }
+
+}

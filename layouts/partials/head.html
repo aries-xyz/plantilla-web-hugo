@@ -1,0 +1,44 @@
+{{/*
+  ============================================================
+  HEAD.HTML - Metadatos del <head>
+  ============================================================
+  Se encarga de:
+    - Charset y viewport
+    - Título dinámico (página actual + título del sitio)
+    - Script de detección de tema (localStorage > SO > dark)
+    - Carga del CSS principal
+
+  No necesitas modificar este archivo normalmente.
+  ============================================================
+*/}}
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+{{/*  Título: "Página | Sitio" o solo "Sitio" si no hay título  */}}
+<title>
+{{ if .Title }}
+{{ .Title }} | {{ .Site.Title }}
+{{ else }}
+{{ .Site.Title }}
+{{ end }}
+</title>
+
+{{/*
+  Script de detección de tema:
+  - Si el usuario ya eligió tema (localStorage), lo respeta
+  - Si no, sigue la preferencia del sistema operativo
+  - Si no hay preferencia, usa "dark" (definido en baseof.html)
+*/}}
+<script>
+(() => {
+    const theme = localStorage.getItem("theme");
+    if (theme === "light" || theme === "dark") {
+        document.documentElement.setAttribute("data-theme", theme);
+    } else if (window.matchMedia("(prefers-color-scheme: light)").matches) {
+        document.documentElement.setAttribute("data-theme", "light");
+    }
+})();
+</script>
+
+{{/*  CSS principal (importa todos los archivos CSS)  */}}
+<link rel="stylesheet" href="{{ "css/style.css" | relURL }}">

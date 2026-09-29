@@ -1,0 +1,105 @@
+/* ============================================================
+   COMPONENTS.CSS - Componentes de UI
+   ============================================================
+   Define los estilos de los componentes reutilizables del sitio:
+   cards, imágenes, formularios, tags, sitemap, etc.
+
+   PERSONALIZACIÓN:
+   - Ajusta los colores usando las variables de variables.css
+   - Modifica los tamaños y espaciados según tus necesidades
+   ============================================================ */
+
+/* ----- Card (contenedor elevado) ----- */
+.card {
+    background: var(--surface);         /* Fondo de la card */
+    border: 1px solid var(--border);    /* Borde sutil */
+    border-radius: var(--radius-card);  /* Esquinas redondeadas */
+    padding: var(--spacing-md);         /* Espaciado interno */
+    box-shadow: var(--shadow);          /* Sombra para efecto elevado */
+}
+
+/* ----- Títulos de cards en páginas de lista ----- */
+.card h3 {
+    text-align: center;                 /* Centrar títulos de elementos */
+    margin: 0 0 10px;                   /* Margen inferior para separar de la descripción */
+}
+
+/* ----- Área de dirección cripto (textarea de solo lectura) ----- */
+.crypto-address {
+    display: block;
+    width: 100%;
+    margin: 1rem auto;
+
+    padding: 1rem;
+    box-sizing: border-box;
+
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+
+    color: orange;                      /* Color distintivo para direcciones */
+
+    font-family: monospace;             /* Fuente monoespaciada para direcciones */
+    font-size: 0.9rem;
+    line-height: 1.5;
+
+    resize: none;                       /* Evitar que el usuario cambie el tamaño */
+    overflow-wrap: anywhere;             /* Romper palabras largas */
+    word-break: break-word;             /* Romper en cualquier punto si es necesario */
+}
+
+/* ----- Imagen de perfil (circular) ----- */
+.profile-img {
+    display: block;                     /* Convertir en block para poder centrar */
+    margin: 0 auto;                     /* Centrar horizontalmente */
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;                 /* Hacer la imagen circular */
+    border: 2px solid var(--border);
+    object-fit: cover;                  /* Ajustar la imagen sin distorsionar */
+}
+
+/* ----- Imagen ajustable (se adapta al ancho del contenedor) ----- */
+.adjust-img {
+    display: block;
+    max-width: 100%;                    /* Nunca más ancha que el contenedor */
+    height: auto;                       /* Mantener proporción */
+    margin: 1rem auto;                  /* Centrar con margen */
+}
+
+/* ----- Navbar (flexbox) ----- */
+.navbar {
+    display: flex;
+    justify-content: space-between;     /* Espacio entre brand y links */
+    align-items: center;                /* Alinear verticalmente */
+}
+
+/* ----- Enlaces de navegación ----- */
+.nav-links {
+    display: flex;
+}
+
+/* ----- Botón de tema ----- */
+.theme-button {
+    cursor: pointer;                    /* Cursor de mano */
+}
+
+/* ----- Campos de formulario ----- */
+form input[type="text"],
+form input[type="email"],
+form textarea {
+    width: 100%;                        /* Ancho completo */
+    box-sizing: border-box;             /* Incluir padding en el ancho */
+}
+
+/* ----- Elemento oculto (honeypot para formularios) ----- */
+.hidden {
+    display: none !important;            /* Ocultar completamente */
+}
+
+/* ----- Botón de envío del formulario de contacto ----- */
+#contact-form button {
+    display: block;                     /* Convertir en block para poder alinear */
+    margin-left: auto;                  /* Alinear a la derecha */
+    margin-right: 0;                    /* Sin margen derecho */
+}

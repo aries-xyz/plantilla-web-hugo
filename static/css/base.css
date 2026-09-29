@@ -1,0 +1,51 @@
+/* ============================================================
+   BASE.CSS - Estilos base y reset
+   ============================================================
+   Define los estilos fundamentales del sitio: márgenes, colores
+   base, tipografía y estilos de elementos HTML comunes.
+
+   Estos estilos se aplican a TODAS las páginas.
+   ============================================================ */
+
+/* ----- Body (cuerpo del documento) ----- */
+body {
+    margin: 0;                          /* Eliminar margen por defecto del navegador */
+    background: var(--bg);              /* Fondo del sitio (tema oscuro/claro) */
+    color: var(--text);                 /* Color de texto principal */
+    font-family: var(--font-main);      /* Tipografía del sistema */
+    font-size: 14px;                    /* Tamaño base de fuente */
+    text-align: left;                   /* Alinear contenido a la izquierda */
+}
+
+/* ----- Enlaces ----- */
+a {
+    color: var(--text-muted);           /* Color de enlaces (suave) */
+}
+
+/* ----- Párrafos ----- */
+p {
+    line-height: 1.5;                   /* Altura de línea para mejor legibilidad */
+}
+
+/* ----- Encabezados h1 ----- */
+h1 {
+    text-align: center;                 /* Centrar títulos principales */
+}
+
+/* ----- Encabezados h2 ----- */
+h2 {
+    text-align: center;                 /* Centrar títulos de sección */
+    letter-spacing: 1px;                /* Espaciado entre letras */
+    color: var(--text-soft);            /* Color suave para no competir con el texto */
+    margin: 20px 0 10px;                /* Margen superior e inferior */
+    font-size: 16px;                    /* Tamaño ligeramente mayor al base */
+}
+
+/* ----- Encabezados h3 ----- */
+h3 {
+    text-align: center;                 /* Centrar títulos */
+    letter-spacing: 0.5px;              /* Espaciado entre letras reducido */
+    color: var(--text-soft);            /* Color suave */
+    margin: 15px 0 8px;                 /* Margen superior e inferior */
+    font-size: 14px;                    /* Tamaño ligeramente menor que h2 */
+}
