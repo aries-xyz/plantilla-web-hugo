@@ -16,7 +16,7 @@ Plantilla base para sitios web estáticos con Hugo. Diseño minimalista, móvil-
 ## Estructura del proyecto
 
 ```
-plantilla-hugo/
+plantilla-web-hugo/
 ├── archetypes/              # Plantillas para `hugo new`
 │   ├── default.md           # Plantilla base (draft = true)
 │   └── proyectos.md         # Plantilla para proyectos (draft = false)
@@ -56,14 +56,21 @@ plantilla-hugo/
 │   ├── js/                  # JavaScript
 │   │   ├── theme.js         # Gestión de temas claro/oscuro
 │   │   └── contact-form.js  # Validación del formulario
-│   └── images/              # Imágenes estáticas
+│   └── images/              # Imágenes estáticas (placeholders SVG)
 ├── hugo.toml                # Configuración del sitio
+├── LICENSE                  # CC0 1.0 Universal
 └── README.md                # Este archivo
 ```
 
+`static/images/` sólo trae `placeholder.svg` y `profile.svg`. No se incluyen
+fotos de ejemplo: las imágenes que usa el contenido de ejemplo apuntan a esos
+placeholders, así que sustitúyelos por las tuyas al empezar.
+
 ## Requisitos
 
-- [Hugo](https://gohugo.io) (versión extendida recomendada)
+- [Hugo](https://gohugo.io) **0.128.0 o superior, versión extended** (la
+  plantilla usa `resources` y el tema claro/oscuro de `variables.css`).
+  Verifícalo con `hugo version`: debe incluir el sufijo `+extended`.
 - [Git](https://git-scm.com) (opcional, para control de versiones)
 
 ## Inicio rápido
@@ -76,10 +83,11 @@ hugo new site mi-sitio
 cd mi-sitio
 
 # Copiar los archivos de la plantilla
-cp -r /ruta/a/plantilla-hugo/* .
+cp -r /ruta/a/plantilla-web-hugo/* .
 
-# O usar git para clonar (si la plantilla está en un repo)
-# git clone https://github.com/tu-usuario/plantilla-hugo.git mi-sitio
+# O usar git para clonar
+git clone https://github.com/aries-xyz/plantilla-web-hugo.git mi-sitio
+cd mi-sitio
 ```
 
 ### 2. Configurar el sitio
@@ -242,9 +250,12 @@ weight: 1                      # Orden de aparición (opcional)
 
 ## Licencia
 
-Esta plantilla está liberada bajo [CC0 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/). Puedes usarla, modificarla y distribuirla libremente, incluso para proyectos comerciales, sin necesidad de atribución.
+[CC0 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/).
+Puedes usarla, modificarla y distribuirla libremente, incluso para proyectos
+comerciales, sin necesidad de atribución. El texto legal completo está en el
+archivo [`LICENSE`](LICENSE).
 
 ## Créditos
 
-- [Hugo](https://gohugo.io) - Generador de sitios estáticos
-- Desarrollado con la ayuda de [LongCat 2.5 Preview Free](https://opencode.ai)
+- [Hugo](https://gohugo.io) — generador de sitios estáticos
+- Generado con [opencode](https://opencode.ai)

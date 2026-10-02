@@ -10,7 +10,7 @@ No se trata solo de tener una presencia en línea, sino de recuperar el control 
 
 ### Tu jardín digital
 
-{{< img-static src="images/pawel-czerwinski-q3z2agdEGuc-unsplash.jpg" alt="Imagen" >}}
+{{< img-static src="images/placeholder.svg" alt="Imagen" >}}
 
 Imagina tu sitio web como un jardín digital: un espacio propio donde decides qué cultivar, cómo organizarlo y quién puede visitarlo.
 
@@ -32,7 +32,7 @@ Las redes sociales están diseñadas para captar tu atención y mantenerte engan
 - **Dependencia de plataformas**: Tu contenido no desaparece si una plataforma cambia sus términos o cierra.
 - **Presión social**: Sin likes, sin seguidores, sin métricas de validación. Solo tu contenido y tus visitantes.
 
-{{< img-static src="images/nathan-da-silva-FO7kUmBYVi0-unsplash.jpg" alt="Imagen" >}}
+{{< img-static src="images/placeholder.svg" alt="Imagen" >}}
 
 Crear tu propio sitio web es más que un proyecto técnico: es una declaración de independencia digital.
 

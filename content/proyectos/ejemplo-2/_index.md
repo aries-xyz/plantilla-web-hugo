@@ -24,7 +24,7 @@ Cada proyecto puede tener:
 
 Puedes agregar imágenes:
 
-{{< img-static src="images/pedro-miranda-3QzMBrvCeyQ-unsplash.jpg" alt="Ejemplo de imagen" >}}
+{{< img-static src="images/placeholder.svg" alt="Ejemplo de imagen" >}}
 
 ## Conclusión
 

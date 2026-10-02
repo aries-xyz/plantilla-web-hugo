@@ -1,6 +1,6 @@
 # Acerca de
 
-{{< img-static src="images/fotos-s_E80-H3HWo-unsplash.jpg" alt="Foto de perfil" cls="profile-img" >}}
+{{< img-static src="images/profile.svg" alt="Foto de perfil" cls="profile-img" >}}
 
 ## Tu nombre
 

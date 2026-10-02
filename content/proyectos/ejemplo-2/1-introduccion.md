@@ -21,7 +21,7 @@ Puedes incluir:
 
 Puedes agregar imágenes usando el shortcode:
 
-{{< img-static src="images/sol.png" alt="Ejemplo de imagen" >}}
+{{< img-static src="images/placeholder.svg" alt="Ejemplo de imagen" >}}
 
 ## Conclusión
 

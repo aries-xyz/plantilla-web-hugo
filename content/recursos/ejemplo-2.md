@@ -23,7 +23,7 @@ Fácil de usar. Gratuito. Open source.
 
 ## Imagen
 
-{{< img-static src="images/natalie-parham-9Qccv5rZtRM-unsplash.jpg" alt="Captura del recurso" >}}
+{{< img-static src="images/placeholder.svg" alt="Captura del recurso" >}}
 
 ---
 

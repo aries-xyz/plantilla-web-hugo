@@ -19,7 +19,7 @@ Este artículo cubre un tema diferente para mostrar variedad.
 
 ## Imagen
 
-{{< img-static src="images/daria-glakteeva-2w0IdiEI-hg-unsplash.jpg" alt="Imagen de ejemplo" >}}
+{{< img-static src="images/placeholder.svg" alt="Imagen de ejemplo" >}}
 
 ## Conclusión
 
